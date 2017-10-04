@@ -1,3 +1,19 @@
+/* header */
+/* body */
+/* footer */
+
+h1, h3 {
+    font-weight: bold;
+}
+
+li {
+    display: inline;
+}
+
+article {
+    margin: 20px;
+}
+
 .article {
     border: 1px solid #ffdead;
     color: goldenrod;
