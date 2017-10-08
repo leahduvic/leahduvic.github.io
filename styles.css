@@ -1,26 +1,27 @@
-/* header */
-/* body */
-/* footer */
-
 /* Whole site general code */
+body {
+    background: #696969;
+    color: #F0FFFF;
+    font-family: "Times New Roman", Times, serif;
+    margin: 50px, 20px, 50px, 20px;
+}
+
+/* index code */
+/* resume code */
+/* story code */
+/* blog code */
+/* contact code */
+/* project code */
 
 
 h1, h3 {
     font-weight: bold;
 }
 
-li {
+li.nav {
     display: inline;
 }
 
-article {
-    margin: 20px;
-}
-
-.article {
-    border: 1px solid #ffdead;
-    color: goldenrod;
-}
 
 #intro {
     font-size: 3em;
