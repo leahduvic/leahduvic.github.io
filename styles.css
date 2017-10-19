@@ -1,10 +1,41 @@
 /* Whole site general code */
 body {
-    background: #696969;
-    color: #F0FFFF;
-    font-family: "Times New Roman", Times, serif;
-    margin: 50px, 20px, 50px, 20px;
+    background: #999999;
+    color: black;
+    font-family: 'Slabo 27px', serif;
 }
+
+div.nav {
+    display: block;
+    text-align: center;
+    margin-right: 20px; 
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+/* image from about page */
+img {
+    box-shadow: 10px 10px 5px black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    padding: 8px;
+}
+
+.main {
+    text-align: center;
+}
+
 
 /* index code */
 /* resume code */
@@ -12,18 +43,4 @@ body {
 /* blog code */
 /* contact code */
 /* project code */
-
-
-h1, h3 {
-    font-weight: bold;
-}
-
-li.nav {
-    display: inline;
-}
-
-
-#intro {
-    font-size: 3em;
-}
 /* Contact Page */
