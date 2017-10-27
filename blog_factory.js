@@ -35,9 +35,9 @@ const blog3 = {
 
 const blog4 = {
     "Btitle": "Week 3",
-    "date": "10/20/2017",
-    "number": "3",
-    "post": "This week began with another group project, which went well. Then pagination came along and wrecked me. There's something humbling about going from knowing you know something, to then feeling like you don't. CSS is still something else, I am catching on some days and others I want to throw the computer."
+    "date": "10/27/2017",
+    "number": "4",
+    "post": "This week was filled with some ups and some downs. One day you can be on a high of completing a task and then the next get reminded of how much you really don't know. I attempted pagination on my own, it went okay... even after looking over the cheese example. I find I understand more, but there's still so much to process. Now onto Lexscopistan, not sure how I feel about this task outside of being excited and terrified. All the emotions you feel during this time are exhilerating, somehow. "
 }
 
 const blog5 = {
