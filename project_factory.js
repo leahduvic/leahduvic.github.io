@@ -1,17 +1,16 @@
-/* haven't built html for project yet, once complete add data here */
+// /* haven't built html for project yet, once complete add data here */
 
-const projectInfo = {};
+// const projectInfo = {};
 
-/* function projectBuilder (**need info here**) { */
-    let newProject = {};
-    newProject.name = name;
-    newProject.dateComp = dateComp;
-    newProject.info = info;
-    return newProject;
-}
+// /* function projectBuilder (**need info here**) { */
+//     let newProject = {};
+//     newProject.name = name;
+//     newProject.dateComp = dateComp;
+//     newProject.info = info;
+//     return newProject;
+// let
 
-let searchProject = contactBuilder("twitter", "linkedIn", "email");
-console.log(searchProject) 
+
 
 const homeInventoryString = JSON.stringify(searchProject)
 localStorage.setItem("project", homeInventoryString)
