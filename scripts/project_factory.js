@@ -12,8 +12,8 @@
 
 
 
-const homeInventoryString = JSON.stringify(searchProject)
-localStorage.setItem("project", homeInventoryString)
+// const homeInventoryString = JSON.stringify(searchProject)
+// localStorage.setItem("project", homeInventoryString)
 
-const storedInventory = localStorage.getItem("project")
-let HomeInventory = JSON.parse(storedInventory)
+// const storedInventory = localStorage.getItem("project")
+// let HomeInventory = JSON.parse(storedInventory)

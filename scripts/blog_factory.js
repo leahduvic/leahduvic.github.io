@@ -58,10 +58,10 @@
 
 
 // UNCOMMENT BELOW FIRST TIME TO GET TO LOCAL STORAGE. 
-// let blogList = []
-// let BlogDatabase = {
-//     "blogList": blogList
-// }
+let blogList = []
+let BlogDatabase = {
+    "blogList": blogList
+}
 
-// const blogString = JSON.stringify(BlogDatabase)
-// localStorage.setItem("blogDatabase", blogString)
+const blogString = JSON.stringify(BlogDatabase)
+localStorage.setItem("blogDatabase", blogString)
