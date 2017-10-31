@@ -1,8 +1,8 @@
 const storedBlog = JSON.parse(localStorage.getItem("blogDatabase"))
-
+console.log(storedBlog)
 const blogInfo = document.getElementsByClassName("posts")[0]
 
-
+// all of this is now on the pagination.js page -- 
 // for (let i = 0; i < storedBlog.blogList.length; i++) {
 //     let blog = storedBlog.blogList[i]
 //     blogInfo.innerHTML += `
@@ -14,3 +14,75 @@ const blogInfo = document.getElementsByClassName("posts")[0]
 //     </article>
 //     `
 // }
+
+// BLOG storing itself
+
+//sorting blogs by id numbers
+storedBlog.blogList.sort((p, n) => n.id - p.id)
+
+
+// id generator
+const idGenerator = function* (from) {
+    let id = 1
+    while (true) {
+        yield from + id
+        id++
+    }
+}
+
+const lastId = storedBlog.blogList[0] || { id: 0 }
+const blogIdGen = idGenerator(lastId.id)
+
+//factory for new blogs 
+const blogFactory = function (Btitle, date, post) {
+    return Object.create(null, {
+        "Btitle": {
+            value: Btitle,
+            enumerable: true
+        },
+        "date": {
+            value: date,
+            enumerable: true
+        },
+        "id": {
+            value: blogIdGen.next().value,
+            enumerable: true
+        },
+        "post": {
+            value: post,
+            enumerable: true
+        }
+    })
+}
+
+// adding the event listener to the save button
+const saveButtonEl = document.getElementById("blog_button").addEventListener("click", event => {
+
+
+    //creating a new blog
+    const newBlog = blogFactory(
+        document.getElementsByClassName("input1")[0].value,
+        document.getElementsByClassName("input2")[0].value,
+        document.getElementsByClassName("input3")[0].value,
+    )
+console.log(newBlog)
+
+// let blogList = []
+
+// blogList.push(blog1, blog2, blog3, blog4, blog5, blog6)
+// blogList.push(newBlog)
+// let BlogDatabase = {
+//     "blogList": blogList
+// }
+// console.log(BlogDatabase)
+    // adding the new blog to the array of already existing blogs    
+    storedBlog.blogList.push(newBlog)
+    // console.log(storedBlog)
+    // storing the blog into the database 
+    localStorage.setItem("blogDatabase", JSON.stringify(storedBlog))
+    // localStorage.setItem("blogDatabase", JSON.stringify(BlogDatabase))
+})
+
+// const deleteButtonEl = document.getElementsByClassName("delete_button").addEventListener("click", event => {
+//     const clear = ""
+// })

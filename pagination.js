@@ -68,14 +68,17 @@ function produceBlog (event) {
         (pageNumber - 1) * itemsPerPage, 
         pageNumber * itemsPerPage
     )
+  
 // printing blog info to the DOM
     for (let i = 0; i < itemsToDisplay.length; i++) {
         let currentBlog = itemsToDisplay[i];
+        console.log(currentBlog)
+
         blogEl.innerHTML += `
-        <section>
+        <section class="blog_design">
         <h1>${currentBlog.Btitle}</h1>
         <h4>${currentBlog.date}</h4>
-        <h4>${currentBlog.number}</h4>
+        <h4>${currentBlog.id}</h4>
         <h4>${currentBlog.post}</h4>
         </section>
         `
