@@ -70,10 +70,7 @@ function produceBlog (event) {
     )
   
 // printing blog info to the DOM
-    for (let i = 0; i < itemsToDisplay.length; i++) {
-        let currentBlog = itemsToDisplay[i];
-        console.log(currentBlog)
-
+    itemsToDisplay.forEach(function(currentBlog) { 
         blogEl.innerHTML += `
         <section class="blog_design">
         <h1>${currentBlog.Btitle}</h1>
@@ -82,7 +79,8 @@ function produceBlog (event) {
         <h4>${currentBlog.post}</h4>
         </section>
         `
-    }
+    })
+ 
 }
 // get the numbers to populate at the bottom of the DOM
 const blogLinks = document.getElementsByClassName("blogPage")

@@ -67,14 +67,7 @@ const saveButtonEl = document.getElementById("blog_button").addEventListener("cl
     )
 console.log(newBlog)
 
-// let blogList = []
 
-// blogList.push(blog1, blog2, blog3, blog4, blog5, blog6)
-// blogList.push(newBlog)
-// let BlogDatabase = {
-//     "blogList": blogList
-// }
-// console.log(BlogDatabase)
     // adding the new blog to the array of already existing blogs    
     storedBlog.blogList.push(newBlog)
     // console.log(storedBlog)
