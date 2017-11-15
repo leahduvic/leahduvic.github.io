@@ -1,4 +1,4 @@
-const storedBlog = JSON.parse(localStorage.getItem("blogDatabase"))
+const storedBlog = JSON.parse(localStorage.getItem("blogDatabase")) || {}
 console.log(storedBlog)
 const blogInfo = document.getElementsByClassName("posts")[0]
 
@@ -18,8 +18,9 @@ const blogInfo = document.getElementsByClassName("posts")[0]
 // BLOG storing itself
 
 //sorting blogs by id numbers
-storedBlog.blogList.sort((p, n) => n.id - p.id)
 
+    storedBlog.blogList
+        .sort((p, n) => n.id - p.id)
 
 // id generator
 const idGenerator = function* (from) {
@@ -65,8 +66,6 @@ const saveButtonEl = document.getElementById("blog_button").addEventListener("cl
         document.getElementsByClassName("input2")[0].value,
         document.getElementsByClassName("input3")[0].value,
     )
-console.log(newBlog)
-
 
     // adding the new blog to the array of already existing blogs    
     storedBlog.blogList.push(newBlog)
@@ -79,3 +78,25 @@ console.log(newBlog)
 // const deleteButtonEl = document.getElementsByClassName("delete_button").addEventListener("click", event => {
 //     const clear = ""
 // })
+
+
+
+document.querySelector("input[name='search']").addEventListener(
+    "keyup", event => {
+        if (event.target.value.length >= 3) {
+            //filtering posts
+            const userFiltered = event.target.value.toLowerCase()
+            
+            const filteredBlog = storedBlog.blogList.filter(
+                currentBlog => {
+                    return currentBlog.Btitle.toLowerCase().includes(userFiltered) ||
+                           currentBlog.post.toLowerCase().includes(userFiltered)
+                    }
+                )
+                console.log(filteredBlog)
+                blogEl.innerHTML = ""
+                paginateArticles(filteredBlog)
+            
+        }
+    }
+)
