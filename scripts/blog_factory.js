@@ -1,8 +1,8 @@
 
 
-// const blogPost = function blogBuilder (Btitle, date, number, post) {
+// const blogPost = function blogBuilder (title, date, number, post) {
 //     let newBlog = {};
-//     newBlog.Btitle = Btitle;
+//     newBlog.title = title;
 //     newBlog.date = date;
 //     newBlog.number = number;
 //     newBlog.post = post;
@@ -54,14 +54,18 @@
 //     "post": "This week began with another group project, which went well. Then pagination came along and wrecked me. There's something humbling about going from knowing you know something, to then feeling like you don't. CSS is still something else, I am catching on some days and others I want to throw the computer."
 // }
 // // // blogList.push(blog1, blog2, blog3, blog4, blog5, blog6)
-
-
-
 // UNCOMMENT BELOW FIRST TIME TO GET TO LOCAL STORAGE. 
-// let blogList = []
-// let BlogDatabase = {
-//     "blogList": blogList
-// }
+let blogList = []
+let BlogDatabase = {
+	"blogList": blogList
+}
 
-// const blogString = JSON.stringify(BlogDatabase)
-// localStorage.setItem("blogDatabase", blogString)
+const blogString = JSON.stringify(BlogDatabase)
+localStorage.setItem("blogDatabase", blogString)
+
+// const blogDatabase = function (store) {
+//     let blogList = [] 
+    
+// } 
+
+// module.exports = blogDatabase

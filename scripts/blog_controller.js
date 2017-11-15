@@ -1,5 +1,6 @@
 const storedBlog = JSON.parse(localStorage.getItem("blogDatabase")) || {}
-console.log(storedBlog)
+// console.log(storedBlog)
+// const date = require("./date")
 const blogInfo = document.getElementsByClassName("posts")[0]
 
 // all of this is now on the pagination.js page -- 
@@ -19,60 +20,60 @@ const blogInfo = document.getElementsByClassName("posts")[0]
 
 //sorting blogs by id numbers
 
-    storedBlog.blogList
-        .sort((p, n) => n.id - p.id)
+storedBlog.blogList
+	.sort((p, n) => n.id - p.id)
 
 // id generator
 const idGenerator = function* (from) {
-    let id = 1
-    while (true) {
-        yield from + id
-        id++
-    }
+	let id = 1
+	while (true) {
+		yield from + id
+		id++
+	}
 }
 
 const lastId = storedBlog.blogList[0] || { id: 0 }
 const blogIdGen = idGenerator(lastId.id)
 
 //factory for new blogs 
-const blogFactory = function (Btitle, date, post) {
-    return Object.create(null, {
-        "Btitle": {
-            value: Btitle,
-            enumerable: true
-        },
-        "date": {
-            value: date,
-            enumerable: true
-        },
-        "id": {
-            value: blogIdGen.next().value,
-            enumerable: true
-        },
-        "post": {
-            value: post,
-            enumerable: true
-        }
-    })
+const blogFactory = function (title, date, post) {
+	return Object.create(null, {
+		"title": {
+			value: title,
+			enumerable: true
+		},
+		"date": {
+			value: dateStamp(),
+			enumerable: true
+		},
+		"id": {
+			value: blogIdGen.next().value,
+			enumerable: true
+		},
+		"post": {
+			value: post,
+			enumerable: true
+		}
+	})
 }
 
 // adding the event listener to the save button
 const saveButtonEl = document.getElementById("blog_button").addEventListener("click", event => {
 
 
-    //creating a new blog
-    const newBlog = blogFactory(
-        document.getElementsByClassName("input1")[0].value,
-        document.getElementsByClassName("input2")[0].value,
-        document.getElementsByClassName("input3")[0].value,
-    )
+	//creating a new blog
+	const newBlog = blogFactory(
+		document.getElementsByClassName("input1")[0].value,
+		document.getElementsByClassName("input2")[0].value,
+		document.getElementsByClassName("input3")[0].value
+	)
 
-    // adding the new blog to the array of already existing blogs    
-    storedBlog.blogList.push(newBlog)
-    // console.log(storedBlog)
-    // storing the blog into the database 
-    localStorage.setItem("blogDatabase", JSON.stringify(storedBlog))
-    // localStorage.setItem("blogDatabase", JSON.stringify(BlogDatabase))
+	// adding the new blog to the array of already existing blogs    
+	storedBlog.blogList.push(newBlog)
+	// console.log(storedBlog)
+	// storing the blog into the database 
+	localStorage.setItem("blogDatabase", JSON.stringify(storedBlog))
+	// localStorage.setItem("blogDatabase", JSON.stringify(BlogDatabase))
 })
 
 // const deleteButtonEl = document.getElementsByClassName("delete_button").addEventListener("click", event => {
@@ -82,21 +83,21 @@ const saveButtonEl = document.getElementById("blog_button").addEventListener("cl
 
 
 document.querySelector("input[name='search']").addEventListener(
-    "keyup", event => {
-        if (event.target.value.length >= 3) {
-            //filtering posts
-            const userFiltered = event.target.value.toLowerCase()
+	"keyup", event => {
+		if (event.target.value.length >= 3) {
+			//filtering posts
+			const userFiltered = event.target.value.toLowerCase()
             
-            const filteredBlog = storedBlog.blogList.filter(
-                currentBlog => {
-                    return currentBlog.Btitle.toLowerCase().includes(userFiltered) ||
+			const filteredBlog = storedBlog.blogList.filter(
+				currentBlog => {
+					return currentBlog.Btitle.toLowerCase().includes(userFiltered) ||
                            currentBlog.post.toLowerCase().includes(userFiltered)
-                    }
-                )
-                console.log(filteredBlog)
-                blogEl.innerHTML = ""
-                paginateArticles(filteredBlog)
+				}
+			)
+			console.log(filteredBlog)
+			blogEl.innerHTML = ""
+			paginateArticles(filteredBlog)
             
-        }
-    }
+		}
+	}
 )

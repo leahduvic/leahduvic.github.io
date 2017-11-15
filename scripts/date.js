@@ -4,4 +4,5 @@ const dateStamp = function(event) {
 	return utcDate
 }
 
+module.exports = dateStamp
 // then you need to call the function somewhere. set all this up to be modular. 
