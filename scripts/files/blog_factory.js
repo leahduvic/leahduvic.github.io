@@ -55,13 +55,13 @@
 // }
 // // // blogList.push(blog1, blog2, blog3, blog4, blog5, blog6)
 // UNCOMMENT BELOW FIRST TIME TO GET TO LOCAL STORAGE. 
-let blogList = []
-let BlogDatabase = {
-	"blogList": blogList
-}
+// let blogList = []
+// let BlogDatabase = {
+// 	"blogList": blogList
+// }
 
-const blogString = JSON.stringify(BlogDatabase)
-localStorage.setItem("blogDatabase", blogString)
+// const blogString = JSON.stringify(BlogDatabase)
+// localStorage.setItem("blogDatabase", blogString)
 
 // const blogDatabase = function (store) {
 //     let blogList = [] 
