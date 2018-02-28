@@ -28,19 +28,19 @@
 
 
   <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2"></h1>
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
+      <div class="section no-pad-bot">
+        <div class="container">
+          <br><br>
+          <h1 class="header center teal-text text-lighten-2"></h1>
+          <div class="row center">
+            <h5 class="header col s12 light"></h5>
+          </div>
+
+          <br><br>
+
         </div>
-
-        <br><br>
-
       </div>
-    </div>
-    <div class="parallax"><img src="./images/emile-perron-190221-unsplash.jpg" alt="photo by emile perron" height=128 width=128></div>
+    <div class="parallax"><img src="./images/brightcomputer.png" alt="quote" height=300 width=1000></div>
   </div>
 
 
@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="fas fa-asterisk"></i></h2>
+            <h2 class="center brown-text"><i class="material-icons">code</i></h2>
             <!-- <h5 class="center"><a href="./admin/project.html">Projects</a></h5> -->
 
             <!-- Modal Trigger -->
@@ -71,28 +71,35 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h2 class="center brown-text"><i class="material-icons">more_horiz</i></h2>
             <!-- <h5 class="center"><a href="./admin/story.html" data-target="modal-story" class="modal-trigger">About</a></h5> -->
             
             <!-- Modal Trigger -->
             <h5 class="center"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">About</a></h5>
 
             <!-- Modal Structure -->
-            <div id="modal1" class="modal">
+              <div id="modal1" class="modal">
                 <div class="modal-content">
                   <div class="modal-footer">
                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><strong>X</strong></a>
-                  </div>
-                <h4>About Leah... </h4>
-                <img class="portrait" src="../images/2018_02_06_C22_0127.jpg" alt="photo of Leah" height="350" width="250">
                 </div>
+                  <h4>About Leah... </h4>
+                  
+                  <div class="row">
+                    <div class="col s6"> In my life, there has always been a passion for creating, expressing and consistent learning. All of my hobbies have been framed around these three things. As a child, I found myself enamered by music with all it's intricacies to constructing legos to create whatever popped into my head.  During my teenage years, I found myself mesmerized and interested in computers and all of the interworkings. Once I began college, I found myself on the same path only I went into a different media form of studio art concentrating in film photography. The ambiguity and constant learning of new techniques made for a frustrating, yet a thriving learning environment for myself.</div>
+                    <div class="col s6"><img class="responsive" src="../images/2018_02_06_C22_0127.jpg" alt="photo of Leah" height="350" width="250"></div>
+                  </div>
+                  <div class="row">
+                      <div class="col s12"> In recent years, living from paycheck to paycheck working retail and taking care of other peoples lives, I decided it was time to take care of myself. I revisited coding and found that I do enjoy it. The next steps led me to how will I make this happen, where can I do this, and how long would it take me to complete it. After substantial googling and a friends recommendation, I found NSS- Nashville Software School. Every thing lined up in my life, personally and financially, to make this happen. So I jumped at the opportunity to improve my life and have a career I could be proud of.</div>
+                  </div>
+              </div>
             </div> 
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h2 class="center brown-text"><i class="material-icons">wifi</i></h2>
             <!-- <h5 class="center"><a href="./admin/contact.html" data-target="modal1">Contact</a></h5> -->
             
             <!-- Modal Trigger -->
@@ -102,14 +109,14 @@
             <div id="modal2" class="modal">
                 <div class="modal-content">
                   <div class="modal-footer">
-                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><strong>X</strong>></a>
+                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><strong>X</strong></a>
                   </div>
-                    <ul>
-                      <li><i class="fab fa-twitter-square fa-fw"></i><a href="https://twitter.com/leaheduvic"></i>Twitter</a></li>
-                      <li><i class="fab fa-github fa-fw"></i><a href="https://github.com/leahduvic">GitHub</a></li>
-                      <li><i class="fab fa-linkedin fa-fw"></i><a href="https://www.linkedin.com/in/leah-duvic/">Linked In</a></li>
-                      <li><i class="fas fa-envelope fa-fw"></i><a href="mailto:leaheduvic@gmail.com">E-Mail</a></li>
-                    </ul>
+                  <div class="row">
+                      <div class="col s3"><i class="fab fa-twitter-square fa-fw fa-2x"></i><a href="https://twitter.com/leaheduvic"></i>Twitter</a></div>
+                      <div class="col s3"><i class="fab fa-github fa-fw fa-2x"></i><a href="https://github.com/leahduvic">GitHub</a></div>
+                      <div class="col s3"><i class="fab fa-linkedin fa-fw fa-2x"></i><a href="https://www.linkedin.com/in/leah-duvic/">Linked In</a></div>
+                      <div class="col s3"><i class="fas fa-envelope fa-fw fa-2x"></i><a href="mailto:leaheduvic@gmail.com">E-Mail</a></div> 
+                  </div>
                 </div>
                 
             </div>
@@ -196,7 +203,7 @@
   <script>
       $(document).ready(function() {
       $(".modal").modal();
-      $$('.trigger-modal').modal();
+      $('.trigger-modal').modal();
     });
   </script>
   

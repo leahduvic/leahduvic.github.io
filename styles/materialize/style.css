@@ -105,3 +105,9 @@ footer.page-footer {
     font-size: 1.25em;
   }
 }
+
+@media only screen and (max-width : 1400px) {
+  .something img {
+    max-height: 130%; /* or a little bit higher */
+  }
+}
