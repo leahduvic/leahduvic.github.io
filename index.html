@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
+  <title>Leah Duvic</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,6 +13,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <!-- <a href="https://icons8.com">Icon pack by Icons8</a> -->
 </head>
+
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
@@ -70,8 +71,22 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center"><a href="./admin/story.html" data-target="modal1">About</a></h5>
+            <!-- <h5 class="center"><a href="./admin/story.html" data-target="modal-story" class="modal-trigger">About</a></h5> -->
+            
+            <!-- Modal Trigger -->
+            <h5 class="center"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">About</a></h5>
 
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                <h4>About Leah... </h4>
+                <img class="portrait" src="../images/2018_02_06_C22_0127.jpg" alt="photo of Leah" height="350" width="250">
+                </div>
+                <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+    
             <p class="light">***FILLER***</p>
           </div>
         </div>
@@ -79,8 +94,27 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center"><a href="./admin/contact.html" data-target="modal1">Contact</a></h5>
+            <!-- <h5 class="center"><a href="./admin/contact.html" data-target="modal1">Contact</a></h5> -->
+            
+            <!-- Modal Trigger -->
+            <h5 class="center"><a class="waves-effect waves-light btn modal-trigger" href="#modal2">Connect</a></h5>
 
+            <!-- Modal Structure -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                <h4></h4>
+                <ul>
+                    <li class="twitter"><a href="https://twitter.com/leaheduvic?lang=en">Twitter</a></li>
+                    <li class="linkedIn"><a href="https://www.linkedin.com/in/leah-duvic-994a3a78/">Linked In</a></li>
+                    <li class="github"><a href="https://github.com/leahduvic"> GitHub</a></li>
+                    <li class="email"><a href="mailto:leaheduvic@gmail.com">E-mail</a></li>
+                </ul>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+            
             <p class="light">***FILLER***</p>
           </div>
         </div>
@@ -180,6 +214,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./scripts/materialize/materialize.min.js"></script>
   <script src="./scripts/materialize/init.js"></script>
+  <script>
+      $(document).ready(function() {
+      $(".modal").modal();
+      $$('.trigger-modal').modal();
+    });
+  </script>
   
   
 

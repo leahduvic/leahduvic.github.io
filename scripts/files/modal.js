@@ -12,3 +12,8 @@ $('.modal').modal({
     complete: function() { alert('Closed'); } // Callback for Modal close
   }
 );
+
+// $(document).ready(function() {
+//   $(".modal").modal();
+//   $('#modal1').modal("open");
+// });
