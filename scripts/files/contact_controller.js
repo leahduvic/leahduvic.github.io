@@ -6,4 +6,3 @@
 // <a ${storedContact.twitter}><p>twitter</p></a>
 // <a ${storedContact.linkedIn}><p>linkedIn</p></a>
 // <a ${storedContact.email}><p>email</p></a>
-`
