@@ -111,3 +111,11 @@ footer.page-footer {
     max-height: 130%; /* or a little bit higher */
   }
 }
+
+.foot-icons {
+  padding-left: 25%;
+}
+
+#connect {
+  padding-left: 10%;
+}
