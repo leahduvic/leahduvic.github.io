@@ -118,4 +118,11 @@ footer.page-footer {
 
 #connect {
   padding-left: 10%;
+  padding-bottom: 10%;
 }
+
+/* @media only screen and (max-width : 900px) {
+  .modal .modal-content {
+
+  }
+} */
