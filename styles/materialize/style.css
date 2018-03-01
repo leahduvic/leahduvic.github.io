@@ -121,8 +121,20 @@ footer.page-footer {
   padding-bottom: 10%;
 }
 
-/* @media only screen and (max-width : 900px) {
-  .modal .modal-content {
+.sql {
+  height: 50px;
+  width: auto;
+}
 
-  }
-} */
+.devicon-bootstrap-plain-wordmark, .devicon-csharp-plain, .devicon-angularjs-plain, .devicon-css3-plain-wordmark, .devicon-dot-net-plain-wordmark, .devicon-github-plain-wordmark, .devicon-grunt-plain-wordmark, .devicon-html5-plain-wordmark, .devicon-javascript-plain, .devicon-jquery-plain-wordmark, .devicon-visualstudio-plain {
+  font-size: 4rem;
+}
+
+.icon {
+  height: 50px;
+  width: auto;
+}
+
+#icon {
+  font-size: 5rem;
+}
